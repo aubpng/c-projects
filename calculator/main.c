@@ -30,7 +30,7 @@ int main() {
             printf("%.2f\n", result);
             break;
         default:
-            printf("%c is invalid", optn);
+            printf("%c is invalid\n", optn);
     }
     return 0;
 }
