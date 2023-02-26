@@ -5,7 +5,8 @@ COPTS = -O0 -g -ggdb
 RawBinaries = \
 	helloworld \
 	calculator \
-	converter
+	converter \
+	movement
 
 Binaries = $(patsubst %,build/bin/%,$(RawBinaries))
 
