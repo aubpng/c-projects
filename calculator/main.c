@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 // Calculator written in C for basic arithmetic using floats
 
 int main() {
@@ -10,7 +11,11 @@ int main() {
     printf("Enter an operation (+ - * /): ");
     scanf("%c", &optn);
     printf("Enter two numbers: ");
-    scanf("%f %f", &numOne, &numTwo);
+    int const scanf_result = scanf("%f %f", &numOne, &numTwo);
+    if ((scanf_result == EOF) | (scanf_result != 2)) {
+        perror("scanf Input validation error");
+        exit(1);
+    }
     
     switch (optn) {
         case '+':
